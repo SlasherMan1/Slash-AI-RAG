@@ -18,13 +18,16 @@
 package com.slash.ai.ragent.rag.controller.request;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.slash.ai.ragent.rag.dao.entity.RagTraceRunDO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * RAG Trace 运行记录分页请求
  */
 @Data
-public class RagTraceRunPageRequest extends Page {
+@EqualsAndHashCode(callSuper = true)
+public class RagTraceRunPageRequest extends Page<RagTraceRunDO> {
 
     private String traceId;
 
